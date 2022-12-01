@@ -1,9 +1,8 @@
 package com.sonowz.aoc.y2022
 
 import com.sonowz.aoc.common.IO
-import java.io.File
 
-object Template:
+object AoCDayXX:
 
   ///////////////////////
   // Type Declarations //
@@ -31,9 +30,9 @@ object Template:
   ////////////////////
 
   @main
-  def main: Unit =
+  def DayXX(): Unit =
     val templates = IO
-      .readFileLines("y2022/day1.txt")
+      .readFileLines("y2022/dayXX.txt")
       .map(parseTemplate)
     println(solve1(templates))
     // println(solve2(templates))

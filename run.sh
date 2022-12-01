@@ -9,7 +9,7 @@ fi
 YEAR=$1
 DAY=$2
 
-if [[ ! -f "src/main/scala/com/sonowz/aoc/common/y$YEAR/Day$DAY.scala" ]]; then
+if [[ ! -f "src/main/scala/com/sonowz/aoc/y$YEAR/Day$DAY.scala" ]]; then
     echo "ERROR: y$YEAR/Day$DAY.scala file does not exist."
     exit -1
 fi
@@ -17,4 +17,4 @@ fi
 echo "Running y$YEAR.Day$DAY..."
 echo ""
 
-sbt run "com.sonowz.aoc.y$YEAR.Day$DAY"
+sbt "runMain com.sonowz.aoc.y$YEAR.Day$DAY"

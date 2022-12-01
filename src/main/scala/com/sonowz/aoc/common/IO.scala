@@ -6,5 +6,5 @@ import scala.util.Using
 
 object IO {
   def readFileLines(path: String): Seq[String] =
-    Using(Source.fromResource(path)) { _.getLines().toSeq }.get
+    Using(Source.fromFile("src/main/resources/" + path)) { _.getLines().toSeq }.get
 }
