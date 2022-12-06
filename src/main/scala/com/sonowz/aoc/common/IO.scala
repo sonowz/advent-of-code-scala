@@ -7,4 +7,7 @@ import scala.util.Using
 object IO {
   def readFileLines(path: String): Seq[String] =
     Using(Source.fromFile("src/main/resources/" + path)) { _.getLines().toSeq }.get
+
+  def readFile(path: String): String =
+    Using(Source.fromFile("src/main/resources/" + path)) { _.getLines().mkString("\n") }.get
 }
