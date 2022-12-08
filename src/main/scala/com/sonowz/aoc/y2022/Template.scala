@@ -2,6 +2,8 @@ package com.sonowz.aoc.y2022
 
 import com.sonowz.aoc.common.IO
 
+import scala.util.chaining.given
+
 object AoCDayXX:
 
   ///////////////////////
