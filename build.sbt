@@ -7,5 +7,6 @@ lazy val root = project
     version := "1.0.0-SNAPSHOT",
     scalaVersion := scala3Version,
     libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "2.1.1",
-    libraryDependencies += "org.typelevel" %% "cats-core" % "2.9.0"
+    libraryDependencies += "org.typelevel" %% "cats-core" % "2.9.0",
+    libraryDependencies += ("org.scala-graph" %% "graph-core" % "1.13.5").cross(CrossVersion.for3Use2_13)
   )
