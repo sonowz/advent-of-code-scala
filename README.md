@@ -2,9 +2,12 @@
 
 This solution aims to write elegant FP style code.
 
-- Use `enum`s for better readablity and more strict typecheck
-- Use type classes as much as possible
-- Use pure functions (which never throw exception) only, except functions in input processing
+Note: I am a Haskell programmer who is learning Scala with this AoC.
+
+- Use `enum`s and `case class`es for better readablity and more strict typecheck
+- Use immutable collections as much as possible
+- Use `val` and avoid `var` as much as possible
+- Prefer utilizing Scala base library over Cats
 
 # Instruction
 
