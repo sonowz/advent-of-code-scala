@@ -64,7 +64,7 @@ object Grid2D:
 
     private def getBounds(grid: Map[K, V]): ((Int, Int), (Int, Int)) =
       val xs = grid.keys.map(_.to2DTuple()._1)
-      val ys = grid.keys.map(_.to2DTuple()._1)
+      val ys = grid.keys.map(_.to2DTuple()._2)
       val getBound = (xs: Iterable[Int]) => (xs.min, xs.max)
       val (minX, maxX) = getBound(xs)
       val (minY, maxY) = getBound(ys)
@@ -81,8 +81,8 @@ object Grid2D:
         val mkStringLine = (x: Int, y: Int) =>
           val pos = (x, y).from2DTuple()
           grid.get2DOption(pos).map(_.toString).getOrElse(default)
-        val mkStringGrid = (x: Int) => (minY to maxY).map(mkStringLine(x, _)).mkString("")
-        (minX to maxX).map(mkStringGrid).mkString("")
+        val mkStringGrid = (y: Int) => (minX to maxX).map(mkStringLine(_, y)).mkString("")
+        (minY to maxY).map(mkStringGrid).mkString("\n")
 
       override def mkString2D(): String = grid.mkString2D(" ")
 
